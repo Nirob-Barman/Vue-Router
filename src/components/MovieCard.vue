@@ -7,7 +7,8 @@
             <!-- <h5 class="mb-2 text-2xl font-bold tracking-light text-gray-900 dark:text-white">
                 {{ movie.title }}
             </h5> -->
-            <router-link :to="`/movies/${movie.id}`">{{ movie.title }}</router-link>
+            <!-- <router-link :to="`/movies/${movie.id}`">{{ movie.title }}</router-link> -->
+            <router-link :to="{name: 'movie-details', params: {id: movie.id}}">{{ movie.title }}</router-link>
             <span class="mr-4">{{ movie.year }}</span>
             <span>{{ movie.runtime }}</span>
         </div>

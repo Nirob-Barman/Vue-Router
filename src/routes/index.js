@@ -10,12 +10,17 @@ import { createWebHistory, createRouter } from 'vue-router'
 // const Movies = ()  =>('../views/Movies.vue')
 
 const routes = [
-    { path: '/', component: () => import('../views/Home.vue') },
+    { path: '/', name: 'home', component: () => import('../views/Home.vue') },
     // { path: '/about', component: About },
-    { path: '/about', component: () => import('../views/About.vue') },
+    { path: '/about', name: 'about', component: () => import('../views/About.vue') },
     // { path: '/movies', component: Movies }
-    { path: '/movies', component: () => import('../views/Movies.vue') },
-    {path: '/movies/:id', component: () => import('../views/MovieDetails.vue')}
+    { path: '/movies', name: 'movies', component: () => import('../views/Movies.vue') },
+    {
+        path: '/movies/:id',
+        name: 'movie-details',
+        component: () => import('../views/MovieDetails.vue'),
+        props: true
+    }
 ];
 
 const router = createRouter({
