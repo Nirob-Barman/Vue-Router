@@ -13,12 +13,6 @@ import Navbar from './components/Navbar.vue';
 
     <h1>Footer</h1>
 
-    <div>
-      <div>
-        HomePage
-      </div>
-    </div>
-
   </div>
 </template>
 

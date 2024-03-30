@@ -20,6 +20,11 @@ const routes = [
         name: 'movie-details',
         component: () => import('../views/MovieDetails.vue'),
         props: true
+    },
+    {
+        path: "/:pathMatch(.*)*",
+        name: "not-found",
+        component: () => import('../views/NotFound.vue')
     }
 ];
 

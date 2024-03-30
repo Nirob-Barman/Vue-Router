@@ -1,5 +1,19 @@
 <template>
     <div>
+        <div class="flex justify-center gap-4">
+
+            <!-- impplement how to go left -->
+            <!-- <button @click="$router.go(-1)"> -->
+            <button @click="$router.back()">
+                Go Left
+            </button>
+
+            <!-- impplement how to go right -->
+            <!-- <button @click="$router.go(1)"> -->
+            <button @click="$router.forward()">
+                Go Right
+            </button>
+        </div>
         <h1>Movies</h1>
         <!-- <pre>
             {{ movieList }}
